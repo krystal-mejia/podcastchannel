@@ -1,0 +1,47 @@
+footer{
+    h4 {
+        margin: 24px 0 16px 0;
+        @include estilo-texto;
+        text-align: center;
+    }
+    .logos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 31px;
+        a {
+            color: black;
+            text-decoration: none;
+            i {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    footer{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 100px 0 100px;
+        h4 {
+            height: 28px;
+            margin: 36px 0 36px 0;
+            @include estilo-texto;
+            text-align: center;
+        }
+        .logos{
+            height: 28px;
+            display: flex;
+            justify-content: space-around;
+            margin: 36px 0 36px 0;
+            a {
+                color: black;
+                text-decoration: none;
+                margin: 0 0 0 36px;
+                i {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

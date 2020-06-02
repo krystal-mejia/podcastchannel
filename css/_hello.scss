@@ -1,0 +1,105 @@
+
+.hello {
+    position: relative;
+    top: 44px;
+    display: flexbox;
+    padding: 24px 16px 24px 16px;
+    // z-index: -1;
+
+    .intro {
+        h1 {
+            @include estilo-seccion;
+            display: inline-block;
+            height: 42px;
+        }
+
+        h1:nth-child(4){
+            color: #0000EC;
+        }
+
+        h1:nth-child(2){
+            text-decoration: line-through;
+        }
+
+        h4{
+            margin: 16px 0 0 0;
+            @include estilo-texto;
+        }
+
+        h4:nth-last-child(1){
+            display: none;
+             opacity: 0;
+        }
+    }
+    input {
+        margin: 36px 0 24px 0;
+        width: 288px;
+        height: 48px;
+        background: #00F3BB;
+        @include estilo-link;
+    }
+    input:hover {
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .hello {
+        width: 100%;
+        top: 80px;
+        display: flexbox;
+        padding: 120px 0px 5px 200px;
+        // z-index: -1;
+    
+        .intro {
+            h1 {
+                @include estilo-seccion;
+                display: inline-flex;
+                align-self: center;
+                align-items: center;
+                height: 84px;
+                font-size: 64px;
+            }
+            h1:nth-child(3){
+                padding-left: 12px;;
+            }
+            h1:nth-child(4){
+                color: #0000EC;
+            }
+    
+            h1:nth-child(2){
+                text-decoration: line-through;
+            }
+            h4{
+                width: 628px;
+                height: 48px;
+                margin: 0 0 0 0;
+                @include estilo-texto;
+                font-size: 16px;
+                line-height: 24px;
+            
+            }
+            h4:nth-last-child(1){
+                display: flex;
+                opacity: 100;
+            }
+            h4:nth-last-child(2){
+                display: none;
+                opacity: 0;
+            }
+        }
+        input {
+            margin: 56px 0 0 0;
+            width: 288px;
+            height: 48px;
+            background: #00F3BB;
+            @include estilo-link;
+            font-size: 18px;
+        }
+        input:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            color: #FFFFFF;
+        }
+    }
+}

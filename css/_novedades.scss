@@ -1,0 +1,70 @@
+.novedades{
+    .back {
+        position: relative;
+        margin-top: 42px;
+        width: 100%;
+        height: 341px;
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+
+        h1{
+            padding: 64px 16px 21px 16px;
+            @include estilo-seccion;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        input {
+            margin: 36px 16px 24px 16px;
+            width: 288px;
+            height: 48px;
+            background: #00F3BB;
+            @include estilo-link;
+        }
+        input:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            color: #FFFFFF;
+        }
+      }
+}
+
+@media screen and (min-width: 768px){
+    .novedades{
+        .back {
+            display: flexbox;
+            justify-content: center;
+            align-content: center;
+            align-self: center;
+            align-items: center;
+            margin-top: 42px;
+            width: 100%;
+            height: 518px;
+            background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+            clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
+            
+            h1{
+                position: relative;
+                padding: 213px 16px 21px 16px;
+                @include estilo-seccion;
+                font-size: 48px;
+                text-align: center;
+                color: white;
+                z-index: 1;
+            }
+            input {
+                display: flexbox;
+                text-align: center;
+                position: relative;
+                margin: 36px 547px 24px 547px;
+                width: 288px;
+                height: 48px;
+                background: #00F3BB;
+                @include estilo-link;
+            }
+            input:hover {
+                background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+                color: #FFFFFF;
+            }
+          }
+    }
+}

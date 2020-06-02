@@ -1,0 +1,49 @@
+.invitadas{
+
+    h1{
+        @include estilo-seccion;
+        margin: 54px 16px 14px 16px;
+
+    }
+    .galeria{
+        display: inline-flex;
+        flex-wrap: wrap;
+        //background-color: chartreuse;
+
+        img {
+            width: 320px;
+            height: 243px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .invitadas{
+        position: relative;
+        margin: 245px 0 0 0;
+
+        h1{
+            display: flex;
+            align-items: center;
+            @include estilo-seccion;
+            font-size: 48px;
+            margin: 54px 36px 14px 200px;
+            width: 481px;
+            height: 62px;
+            //background-color: chartreuse;
+    
+        }
+        .galeria{
+            display: grid;
+            display: inline-flex;
+            flex-wrap: wrap;
+            //background-color: chartreuse;
+    
+            img {
+                width: 480px;
+                height: 364px;
+            }
+        }
+    }
+
+}

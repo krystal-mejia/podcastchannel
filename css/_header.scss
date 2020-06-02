@@ -1,0 +1,157 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 44px;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px 16px 10px 16px;
+    background-color: white;
+    z-index: 1;
+
+    img {
+        width: 24px;
+        height: 24px;
+    }
+
+    nav {
+        display: flex;
+        .menu{
+            
+            ul{
+                display: flexbox;
+                width: 100%;
+                position: absolute;
+                top: 44px;
+                right: 0;
+                overflow: hidden;
+                list-style: none;
+                background: #0000EC;
+                height: 0px;
+
+                li {
+                    display: inline-flexbox;
+                    flex-direction: row;
+                    height: 28px;
+                    position: relative;
+                    padding: 24px 0 24px 16px;
+
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        font-family: 'IBM Plex Mono', monospace;
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        line-height: 28px;
+                    }
+                    a:hover {
+                        color: #00F3BB;
+                        font-weight: 500;
+                        text-decoration: line-through;
+                    } 
+                    a:active {
+                        color: rgba(6,10,36,0.56);
+                        font-weight: 300;
+                        text-decoration: line-through;
+                    } 
+                }
+            }
+            input[type="checkbox"]:checked ~ ul {
+                height: 224px;
+            }
+            input {
+                display: block;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                z-index: 2;
+                position: absolute;
+            }
+            
+            span {
+                display: block;
+                width: 18px;
+                height: 2px;
+                margin-bottom: 4px;
+                position: relative;
+                background: #000;
+                z-index: 1;
+                transform-origin: 3px 0px;
+            }
+            span:first-child {
+                transform-origin: 0% 0%;
+            }
+            span:nth-last-child(2) {
+                transform-origin: 0% 100%;
+            }
+            input:checked ~ span {
+                opacity: 1;
+                transform: rotate(45deg) translate(1px, 1px);
+            }
+            input:checked ~ span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            input:checked ~ span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(1px, 0px);
+            }
+        padding-top: 3px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    header {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        height: 80px;
+        padding: 26px 100px 26px 100px;
+
+        img {
+            width: 36px;
+            height: 36px;
+        }
+        nav {
+            .menu{
+                input {
+                    display: none;
+                    opacity: 0;
+                }
+                span {
+                    display: none;
+                    opacity: 0;
+                }
+
+                ul{
+                display: inline-flex;
+                position: relative;
+                top: 0;
+                right: 0;
+                overflow: hidden;
+                background: unset;
+                height: unset;
+
+                li{
+                height: 36px;
+                padding: 5px 10px;
+                display: inline-block;
+
+                    a {
+                    display: inline-block;
+                    height: 28px;
+                    padding: unset;
+                    line-height: unset;
+                    color: #060A24;
+                    margin-left: 28px;
+                    }
+                }
+                }
+            }
+            }
+            
+
+
+        }
+    }
