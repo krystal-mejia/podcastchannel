@@ -1,90 +1,97 @@
 
 .hello {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     top: 44px;
-    display: flexbox;
-    padding: 24px 16px 24px 16px;
-    // z-index: -1;
+    width: 100%;
 
     .intro {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        box-sizing: border-box;
+        padding: 24px 16px 24px 16px;
+        width: 100vh;
+        
         h1 {
             @include estilo-seccion;
             display: inline-block;
             height: 42px;
         }
 
-        h1:nth-child(4){
-            color: #0000EC;
-        }
-
-        h1:nth-child(2){
+        .tachado {
             text-decoration: line-through;
         }
 
-        h4{
-            margin: 16px 0 0 0;
+        .azul {
+            color: #0000EC;
+        }
+
+        .pmobile {
+            margin: 58px 0 0 0;
             @include estilo-texto;
         }
 
-        h4:nth-last-child(1){
+        .pweb {
             display: none;
-             opacity: 0;
+            opacity: 0;
         }
-    }
-    input {
-        margin: 36px 0 24px 0;
-        width: 288px;
-        height: 48px;
-        background: #00F3BB;
-        @include estilo-link;
-    }
-    input:hover {
-        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
-        color: #FFFFFF;
+        input {
+            margin: 36px 0 24px 0;
+            width: 288px;
+            height: 48px;
+            background: #00F3BB;
+            @include estilo-link;
+            z-index: 1;
+        }
+        input:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            color: #FFFFFF;
+        }
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .hello {
-        width: 100%;
-        top: 80px;
-        display: flexbox;
-        padding: 120px 0px 5px 200px;
-        // z-index: -1;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        top: 200px;
+        margin: 0 0 0 200px;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
     
         .intro {
+            padding: 0;
+            border: 0;
+            margin: 0;
             h1 {
                 @include estilo-seccion;
-                display: inline-flex;
-                align-self: center;
+                display: inline-block;
                 align-items: center;
                 height: 84px;
                 font-size: 64px;
             }
-            h1:nth-child(3){
-                padding-left: 12px;;
-            }
-            h1:nth-child(4){
-                color: #0000EC;
-            }
-    
-            h1:nth-child(2){
-                text-decoration: line-through;
-            }
-            h4{
+            .pweb {
                 width: 628px;
                 height: 48px;
                 margin: 0 0 0 0;
                 @include estilo-texto;
                 font-size: 16px;
                 line-height: 24px;
-            
             }
-            h4:nth-last-child(1){
+            .pweb {
                 display: flex;
                 opacity: 100;
             }
-            h4:nth-last-child(2){
+            .pmobile {
                 display: none;
                 opacity: 0;
             }

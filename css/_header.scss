@@ -6,7 +6,7 @@ header {
     position: fixed;
     padding: 10px 16px 10px 16px;
     background-color: white;
-    z-index: 1;
+    z-index: 3;
 
     img {
         width: 24px;
@@ -101,13 +101,15 @@ header {
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     header {
         display: flex;
+        justify-content: space-between;
         align-items: center;
         position: fixed;
         height: 80px;
         padding: 26px 100px 26px 100px;
+        z-index: 3;
 
         img {
             width: 36px;

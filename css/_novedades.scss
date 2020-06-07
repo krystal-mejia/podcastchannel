@@ -1,6 +1,9 @@
 .novedades{
     .back {
-        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         margin-top: 42px;
         width: 100%;
         height: 341px;
@@ -8,6 +11,7 @@
         clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
 
         h1{
+            width: 100%;
             padding: 64px 16px 21px 16px;
             @include estilo-seccion;
             text-align: center;
@@ -28,14 +32,13 @@
       }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1440px){
     .novedades{
         .back {
-            display: flexbox;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
-            align-content: center;
-            align-self: center;
-            align-items: center;
             margin-top: 42px;
             width: 100%;
             height: 518px;
@@ -52,10 +55,9 @@
                 z-index: 1;
             }
             input {
-                display: flexbox;
                 text-align: center;
                 position: relative;
-                margin: 36px 547px 24px 547px;
+                margin: 36px 16px 24px 16px;
                 width: 288px;
                 height: 48px;
                 background: #00F3BB;
