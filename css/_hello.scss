@@ -72,6 +72,13 @@
             padding: 0;
             border: 0;
             margin: 0;
+            display: unset;
+            flex-direction: unset;
+            flex-wrap: unset;
+            position: unset;
+            box-sizing: unset;
+            width: unset;
+
             h1 {
                 @include estilo-seccion;
                 display: inline-block;

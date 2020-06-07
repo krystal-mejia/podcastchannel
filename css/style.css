@@ -195,7 +195,13 @@ header {
     .hello .intro {
       padding: 0;
       border: 0;
-      margin: 0; }
+      margin: 0;
+      display: unset;
+      flex-direction: unset;
+      flex-wrap: unset;
+      position: unset;
+      box-sizing: unset;
+      width: unset; }
       .hello .intro h1 {
         font-family: 'IBM Plex Sans', sans-serif;
         font-weight: 400;
